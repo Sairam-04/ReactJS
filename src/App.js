@@ -1,23 +1,25 @@
-import React, { Component } from 'react'
-import {useState} from 'react'
+import React, { Component, useState } from 'react'
+// import {useState} from 'react'
+import Class_component from './components/Class_component';
+import Functional_Component from './components/Functional_Component'
+import Hooks from './components/Hooks'
+import PassingDatatoComponent from './components/Props';
+
+const App = () =>{
+  const [data, setData] = useState("Hello from App.js")
+  return(
+    <div>
+      {/* <Functional_Component />
+      <Class_component /> */}
+      {/* <Hooks /> */}
+      <PassingDatatoComponent data={data}/>
+    </div>
+  )
+}
+export default App;
 // import Display from './Display';
 // Importing css file
 // import './App.css';
-/*
-// Class Component
-export default class App extends Component{
-  state = {
-    name : "Sairam",
-  }
-  
-  render() {
-    return(
-      <div>
-        <h2>Welcome {this.state.name}!</h2>
-      </div>
-    )
-  }
-}*/
 
 /* //Functional Component
 const App = () =>{
@@ -88,7 +90,8 @@ const App = () =>{
 
 }*/
 
-/*Use State */
+/*
+//Use State
 const App = () =>{
   const [count, setCount] = useState(0)
   return(
@@ -99,4 +102,4 @@ const App = () =>{
     </div>
   )
 }
-export default App;
+export default App; */
