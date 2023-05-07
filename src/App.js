@@ -9,6 +9,8 @@ import Event_Listeners from './components/Event_Listeners';
 import Use_Effect from './components/Use_Effect';
 import OnChangeHandler from './components/OnChangeHandler'
 import Form_Submission from './components/Form_Submission';
+import Mapfunction from "./components/Mapfunction"
+import Filterfunction from "./components/Filterfunction";
 
 const App = () =>{
   const [data, setData] = useState("Hello from App.js")
@@ -22,7 +24,10 @@ const App = () =>{
       <Event_Listeners />
       <Use_Effect />
       <OnChangeHandler /> */}
-      <Form_Submission />
+      {/* <Form_Submission /> */}
+      <Mapfunction />;
+      <Filterfunction />
+
     </div>
   )
 }
