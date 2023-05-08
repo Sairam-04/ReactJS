@@ -11,6 +11,10 @@ import OnChangeHandler from './components/OnChangeHandler'
 import Form_Submission from './components/Form_Submission';
 import Mapfunction from "./components/Mapfunction"
 import Filterfunction from "./components/Filterfunction";
+import Loginform from './components/Loginform';
+import SignupForm from './components/SignupForm';
+import CalculatorApp from './components/CalculatorApp';
+import FetchExampleApp from './components/FetchExampleApp';
 
 const App = () =>{
   const [data, setData] = useState("Hello from App.js")
@@ -23,12 +27,16 @@ const App = () =>{
       <CSS_Styling />
       <Event_Listeners />
       <Use_Effect />
-      <OnChangeHandler /> */}
-      {/* <Form_Submission /> */}
+      <OnChangeHandler />
+      <Form_Submission />
       <Mapfunction />;
       <Filterfunction />
-
+      <Loginform />
+      <SignupForm />
+      <CalculatorApp /> */}
+      <FetchExampleApp />
     </div>
+
   )
 }
 export default App;
