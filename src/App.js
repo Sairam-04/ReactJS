@@ -15,9 +15,12 @@ import Loginform from './components/Loginform';
 import SignupForm from './components/SignupForm';
 import CalculatorApp from './components/CalculatorApp';
 import FetchExampleApp from './components/FetchExampleApp';
+import AxiosApp from './components/AxiosApp';
+import FirebaseForm from './components/FirebaseForm';
+import HomePage from './components/ReactRouterDOM/HomePage';
 
 const App = () =>{
-  const [data, setData] = useState("Hello from App.js")
+  // const [data, setData] = useState("Hello from App.js")
   return(
     <div>
       {/* <Functional_Component />
@@ -33,8 +36,11 @@ const App = () =>{
       <Filterfunction />
       <Loginform />
       <SignupForm />
-      <CalculatorApp /> */}
-      <FetchExampleApp />
+      <CalculatorApp />
+      <FetchExampleApp /> */}
+      {/* <AxiosApp /> */}
+      {/* <FirebaseForm /> */}
+      <HomePage />
     </div>
 
   )
