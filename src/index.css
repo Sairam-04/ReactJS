@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn{
+  width: 100px;
+    padding: 18px 6px;
+    font-size: 17px;
+    background: linear-gradient(#1a6ce7, #AEEAE2);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 1px 2px 3px 1px #60dbf7;
+}
+
+.btn:hover{
+  width: 100px;
+    padding: 18px 6px;
+    font-size: 17px;
+    background: linear-gradient(#33c12a, rgb(199 150 77));
+    border: none;
+    border-radius: 6px;
+    color: white;
+    box-shadow: 1px 2px 3px 1px #67bd82;
+}

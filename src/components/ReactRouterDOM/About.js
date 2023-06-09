@@ -5,7 +5,9 @@ const About = () => {
   return (
     <>
       <NavBar />
-      <p>Welcome to About Page</p>
+      <center>
+        <p>Displaying About Page Content</p>
+      </center>
     </>
   );
 };

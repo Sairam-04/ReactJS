@@ -1,4 +1,6 @@
-import React, { Component, useState } from 'react'
+
+import React, { Component, useState, createContext } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import {useState} from 'react'
 import Class_component from './components/Class_component';
 import Functional_Component from './components/Functional_Component'
@@ -18,9 +20,32 @@ import FetchExampleApp from './components/FetchExampleApp';
 import AxiosApp from './components/AxiosApp';
 import FirebaseForm from './components/FirebaseForm';
 import HomePage from './components/ReactRouterDOM/HomePage';
+import About from './components/ReactRouterDOM/About';
+import Dashboard from './components/ReactRouterDOM/Dashboard';
+
+import Count from './components/ContextAPI/Count';
+import Display from './components/ContextAPI/Display';
+
+
+export const store = createContext()
 
 const App = () =>{
   // const [data, setData] = useState("Hello from App.js")
+  const [cartData, setCartData] = useState([
+    {
+      brandname: 'Nokia',
+    },
+    {
+      brandname: 'Apple',
+    },
+    {
+      brandname: 'Samsung',
+    },
+    {
+      brandname: 'MI',
+    },
+  ])
+
   return(
     <div>
       {/* <Functional_Component />
@@ -37,10 +62,32 @@ const App = () =>{
       <Loginform />
       <SignupForm />
       <CalculatorApp />
-      <FetchExampleApp /> */}
-      {/* <AxiosApp /> */}
-      {/* <FirebaseForm /> */}
-      <HomePage />
+      <FetchExampleApp /> 
+      <AxiosApp />
+      <FirebaseForm />*/}
+      {/* <HomePage /> */}
+
+      {/* React Router DOM */}
+
+      {/* <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </BrowserRouter> */}
+
+      {/* React Router DOM */}
+
+      {/* Context API */}
+        <store.Provider value={[cartData, setCartData]}>
+          <center>
+            <Count />
+            <Display />
+          </center>
+        </store.Provider>
+      {/* Context API */}
+       
     </div>
 
   )

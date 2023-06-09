@@ -5,7 +5,9 @@ const Dashboard = () => {
   return (
     <>
       <NavBar />
-      <p>Welcome to Dashboard</p>
+      <center>
+        <p>Displaying Dashboard Page Content</p>
+      </center>
     </>
   );
 };

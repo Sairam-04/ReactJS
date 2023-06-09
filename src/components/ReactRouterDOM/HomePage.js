@@ -1,25 +1,25 @@
-import React,{useState} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import About from './About';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import NavBar from './NavBar';
 
 const HomePage = () => {
-    const [showHomePageMessage, setShowHomePageMessage] = useState(false);
+    const navigate = useNavigate();
+    
+    const [auth, setAuth] = useState(false);
 
-    const handleHomeClick = () => {
-        setShowHomePageMessage(true);
-    };
+    if(auth){
+        navigate('/dashboard')
+    }
+
     return (
         <div>
-            <BrowserRouter>
-                <NavBar onHomeClick={handleHomeClick} />
-                {showHomePageMessage && <p>Welcome to Homepage</p>}
-                <Routes>
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/about" element={<About />} />
-                </Routes>
-            </BrowserRouter>
+            <NavBar /><br />
+            <center>
+                <h1>Welcome To HomePage</h1>
+                
+                <button className='btn' onClick={() => setAuth(true)}>LoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLoginLogin</button>
+            </center>
+
         </div>
     );
 };
